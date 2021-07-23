@@ -9,14 +9,18 @@ export default () => {
   const [value, setValue] = React.useState<string | undefined>(undefined);
 
   return (
-    <div className="row">
-      <div className="col-md-6">
-        <h1>{title}</h1>
+    <>
+      <h1>{title}</h1>
+      <p>Enter the name of the package belwo</p>
+      <div className="row">
+        <div className="col-md-3">
+          <Form onSubmit={(v) => setValue(v)} />
+        </div>
 
-        <Form onSubmit={(v) => setValue(v)} />
+        <div className="col-md-9">
+          {value && <Badges packageName={value} />}
+        </div>
       </div>
-
-      <div className="col-md-6">{value && <Badges badge={value} />}</div>
-    </div>
+    </>
   );
 };
