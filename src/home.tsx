@@ -1,15 +1,22 @@
 import React from "react";
-import { title, github } from "./config";
 
-export default () => (
-  <>
-    <h1>{title}</h1>
+import { title } from "./config";
 
-    <p>
-      <a href={github.url}>
-        <i className="fa fa-code"></i> Source
-      </a>
-      &nbsp;available under MIT license. Contributions are welcome.
-    </p>
-  </>
-);
+import Form from "./form";
+import Badges from "./badge";
+
+export default () => {
+  const [value, setValue] = React.useState<string | undefined>(undefined);
+
+  return (
+    <div className="row">
+      <div className="col-md-6">
+        <h1>{title}</h1>
+
+        <Form onSubmit={(v) => setValue(v)} />
+      </div>
+
+      <div className="col-md-6">{value && <Badges badge={value} />}</div>
+    </div>
+  );
+};
