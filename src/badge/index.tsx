@@ -9,6 +9,9 @@ const Badges = ({ packageName }: { packageName: string }) => {
 
   return (
     <>
+      <h3>
+        Package <code>{packageName}</code>
+      </h3>
       <BadgesUI badges={badges} />
       <Markdown badges={badges} />
     </>
