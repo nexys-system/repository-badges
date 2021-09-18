@@ -21,7 +21,7 @@ const Form = ({onSubmit}) => {
     className: "input-group-append"
   }, /* @__PURE__ */ React.createElement("button", {
     className: "btn btn-outline-secondary",
-    type: "button"
+    type: "submit"
   }, "Go"))));
 };
 export default Form;
