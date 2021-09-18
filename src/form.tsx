@@ -22,7 +22,7 @@ const Form = ({ onSubmit }: { onSubmit: (v: string) => void }) => {
           onChange={handleChange}
         />
         <div className="input-group-append">
-          <button className="btn btn-outline-secondary" type="button">
+          <button className="btn btn-outline-secondary" type="submit">
             Go
           </button>
         </div>
