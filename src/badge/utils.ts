@@ -11,11 +11,12 @@ export const getBadges = (packageName: string): Badge[] => {
     packageName
   )}.svg`;
   const npmShieldBadge = `https://img.shields.io/npm/v/${packageName}.svg`;
+  /* this one rarely works
   const bundlephobia: Badge = {
     label: "Bundleophobia",
     img: `https://badgen.net/bundlephobia/min/${packageName}`,
     link: `https://bundlephobia.com/result?p=${packageName}`,
-  };
+  };*/
 
   const prettierBadge = {
     label: "Prettier",
@@ -34,7 +35,7 @@ export const getBadges = (packageName: string): Badge[] => {
       link: npmUrl,
       img: npmShieldBadge,
     },
-    bundlephobia,
+    //bundlephobia,
     prettierBadge,
   ];
 };
